@@ -33,6 +33,7 @@
     methods: {
       titleClick(index) {
         this.currentIndex = index
+        this.$emit('titleClick',index)
       },
       backClick() {
         this.$router.back()
@@ -43,9 +44,9 @@
 
 <style scoped>
   .title {
-    display: flex;
-    font-size: 12px;
-  }
+      display: flex;
+      font-size: 12px;
+    }
   .title-item {
     flex: 1;
   }
@@ -53,6 +54,6 @@
     color: var(--color-high-text);
   }
   .back img {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 </style>
